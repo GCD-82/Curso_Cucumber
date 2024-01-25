@@ -1,0 +1,58 @@
+plugins {
+    // Plugin para aplicaciones Java
+    id 'application'
+}
+
+group 'CursoUndemy'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    // Repositorio Maven Central para obtener dependencias
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.16.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.15.0'
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.15.0'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.15.1'
+
+
+    // Dependencias para Cucumber y JUnit
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps
+    implementation group: 'io.cucumber', name: 'cucumber-jvm-deps', version: '1.0.6'
+    //implementation 'io.cucumber:cucumber-junit:7.3.1'
+    testImplementation 'junit:junit:4.13.2'
+    //testImplementation 'junit:junit:4.12'
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:31.1-jre'
+    //Copiado de Jorge
+
+    // https://mvnrepository.com/artifact/io.cucumber/datatable
+    implementation group: 'io.cucumber', name: 'datatable', version: '1.0.3'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.22.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.22.1'
+}
+/*
+test {
+    // Configuración de la ejecución de las pruebas
+    useJUnitPlatform()
+}
+
+cucumber {
+    // Configuración de Cucumber
+    // Especifica la ubicación de los archivos de definición de pasos y características
+    glue 'com.ejemplo.steps'
+    features 'src/test/resources/features'
+}
+*/
