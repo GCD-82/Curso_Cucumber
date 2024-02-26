@@ -18,21 +18,20 @@ public class GoogleSteps{
     @Given("I am on the Google search page")
     public void navigateToGoogle() {
         google.navigateToGoogle();
-
+        google.clickClosePopup();
     }
 
     @When("I enter a search criteria")
     public void enterSearchCriteria() {
-
+        google.enterSearchCriteria("Argentina");
     }
 
     @And("Click on the search button")
     public void clickSearchButton() {
-
+        google.clickSearch();
     }
 
     @Then("The result match the criteria")
     public void validateResults() {
-
     }
 }

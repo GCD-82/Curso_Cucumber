@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features ="src/test/features",
-        glue = "steps"
+        glue = "steps",
         //Glue es para pegar, es como que indica donde están las definiciones de estos features
+        tags="@Test"//Para la prueba de dropdown
 )
 
 public class RunnerTest {
